@@ -1,0 +1,287 @@
+<html>
+      <head><title>Jessy's Taco Joint</title></head>
+    <style>
+    :root{
+            --primary:hsla(348,97%,63%,0.77);
+            --secondary:hsla(230,96%,62%,0.77);
+            --shadow:0 1px 5px rgba(104,104,104,0.8);
+        }
+        html{
+            font-family:arial,monospace,cursive;   
+        }
+        body{
+            height:100%;
+            width:100%;
+            margin:0px;
+            font-family:monospace;
+            font-size:30px;
+            background:linear-gradient(to right,var(--primary),var(--secondary)),url('https://media.istockphoto.com/vectors/cartoon-cute-hand-drawn-fast-food-seamless-pattern-vector-id959262284?k=20&m=959262284&s=612x612&w=0&h=RXaFtePK6TH9l5TbaInovzPHf3wk7VKl85fIXyb1kVU=') center center ;
+        }
+        .wrapper{
+            display:grid;
+            grid-gap:20px;
+        }
+        .main-nav ul{
+            display:grid;
+            grid-gap:20px;
+            padding:0;
+            list-style:none;
+            grid-template-columns:repeat(5,1fr);
+        }
+        .main-nav a{
+            background-color: #f1c40f;
+            display:block;
+            text-decoration: none;
+            padding:0.8rem;
+            text-align:center;
+            color:black;
+            font-size: 1.6rem;
+            font-weight:bold;
+            text-shadow: var(--shadow);
+            align-items:center;
+            margin:20px;
+            box-shadow:var(--shadow);
+        }
+        .main-nav a:hover{
+        background-color:#ff9933;
+        color:white;  
+        }
+        .top-container{
+            display:grid;
+            grid-gap:20px;
+            grid-template-areas:
+            'showcase showcase top-box-a'
+            'showcase showcase top-box-b'
+        }
+        .showcase{
+            grid-area:showcase;
+            min-height:400px;
+        background:url('https://cdn1.vectorstock.com/i/1000x1000/47/95/fast-food-background-top-view-on-black-background-vector-24044795.jpg');
+            background-size:cover;
+            background-position:center;
+            padding:3rem;
+            display:flex;
+            flex-direction:column;
+            align-items:start;
+            justify-content:center;
+            box-shadow:var(--shadow);
+            height:25pc;
+            margin-left:20px;
+        }
+        .showcase h2{
+            font-size:3rem;
+            margin-bottom:0;
+            background-color:#f1c40f;
+            color:black;
+            position:relative;
+            left:170px;
+            top:-50px;       
+        }
+        .showcase p{
+            background-color:#f1c40f;
+            color:black;
+            position:relative;
+            left:350px;
+            top:-50px;   
+        }
+        .top-box{
+            background:#f1c40f;
+            display:grid;
+            align-items:center;
+            justify-items:center;
+            box-shadow:var(--shadow);
+            padding:1.4rem;
+            margin-right:20px;
+           height:180px;
+
+        }
+        .top-box h4{
+            font-size:45px;
+            position:relative;
+            top:-50px;
+        }
+        .top-box p{
+           font-size:25px;
+            position:relative;
+            top:-70px; 
+        }
+        .top-box-a{
+            position:relative;
+            
+            grid-area:top-box-a;          
+        }
+        .top-box-b{
+            grid-area:top-box-b;           
+        }
+        .boxes{
+           display:grid;
+            grid-gap:20px;
+            grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+                margin:20px;
+        }
+        .box{
+            background:white;
+            text-align:center;
+            padding:1.5rem 2rem;
+            box-shadow:var(--shadow);
+
+        }
+        .tacos{
+            position:absolute;
+            height:150px;
+        }
+        .info{
+            background:white;
+            box-shadow:var(--shadow);
+            display:grid;
+            grid-gap:30px;
+            grid-template-columns:repeat(2,1fr);
+            padding:3rem;
+            margin:50px;
+        }
+        .Portfolio{
+            display:grid;
+            grid-gap:30px;
+            grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+            margin:30px;
+        }
+        .Portfolio img{
+            width:100%;
+          box-shadow:var(--shadow);  
+        }
+                .myButton {
+	box-shadow:inset 0px 1px 0px 0px #fbafe3;
+	background:linear-gradient(to bottom, #ff5bb0 5%, #ef027d 100%);
+	background-color:#ff5bb0;
+	border-radius:6px;
+	border:1px solid #ee1eb5;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #c70067;
+}
+.myButton:hover {
+	background:linear-gradient(to bottom, #ef027d 5%, #ff5bb0 100%);
+	background-color:#ef027d;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+/* media queries */
+        @media(max-width:700px){
+            .top-container{
+                grid-template-areas:'showcase showcase''top-box-a top-box-b';
+            } 
+            .showcase h1{
+                font-size:2.5rem;
+                
+            }
+            .main-nav ul{
+                grid-template-columns:1fr;
+            }
+            .info{
+                grid-template-columns:1fr;
+            }
+                        .info .yButton{
+                display:block;
+                            text-align:center;
+                            margin:auto;
+            }
+
+        }
+        @media(max-width:500px){
+            .top-container{
+                grid-template-areas:'showcase'
+                    'top-box-a '
+                    'top-box-b';
+            } 
+        }
+        
+    </style>
+<body>
+    <div class="wrapper">
+        <div class="main-nav">
+        <ul>
+            <li>
+            <a href="#">TACOS</a>
+            </li>
+            <li>
+            <a href="#">BEERS</a>
+            </li>
+            <li>
+            <a href="#">WINES</a>
+            </li>
+             <li>
+                <a href="#"> DESSERTS</a>
+            </li>
+            <li><a href="#">RESERVATIONS</a>
+            </li>
+            </ul>
+        </div>
+    </div>
+            <div class="top-container">
+            <header class="showcase">
+            <h2>Jessy's Taco Joint</h2>
+            <p>Pretty good Tacos!</p>
+            </header>
+            <div class="top-box top-box-a">
+                <h4>$1.99</h4>
+                <p class="price1">Tacos</p>
+            </div>
+             <div class="top-box top-box-b">
+                <h4>$3.99</h4>
+                <p class="price1">Kombudha</p>
+            </div>
+        
+        </div>
+    <section class="boxes">
+            <div class="box">
+                <img src="https://img.icons8.com/doodle/2x/taco.png ">
+            <h3>Tacos</h3>
+            <p>Lorem ipsum dolor sit amet,consectetur adipiscing eleit</p>
+            </div>
+            <div class="box">
+                <img src="https://img.icons8.com/doodle/2x/beer--v1.png">
+            <h3>Beer</h3>
+            <p>Lorem ipsum dolor sit amet,consectetur adipiscing eleit</p>
+            </div>
+            <div class="box">
+                <img src="https://img.icons8.com/doodle/2x/champagne--v1.png">
+            <h3>Wine</h3>
+            <p>Lorem ipsum dolor sit amet,consectetur adipiscing eleit.</p>
+            </div>
+            <div class="box">
+                <span class="music"> <img src="https://img.icons8.com/offices/2x/musical-notes.png"></span>
+            <h3>Music</h3>
+            <p>Lorem ipsum dolor sit amet,consectetur adipiscing eleit.</p>
+            </div>  
+            </section>
+    <section class="info">
+        <img src="https://cdn.dribbble.com/users/2485966/screenshots/6797142/all-you-need-is-love-and-tacos-dribbble.jpg">
+            <div>
+            <h2>TACOS TIME</h2>
+            <p>Slim Profile,easy to hold and Loaded with Cheese!!</p>
+            <a href="#" class="myButton">Learn More--></a>
+            </div>
+        </section>
+        <!--Portfolio-->
+        <section class="Portfolio">
+        <img src="https://cdn.dribbble.com/users/1787323/screenshots/14959157/media/adaa7839fe4f2aeb58489cbed2b67442.png?compress=1&resize=200x200&vertical=top"alt="#">
+        <img src="https://cdn.dribbble.com/users/1787323/screenshots/17057630/media/6001a55b58f271d30c73f6032f34d6f2.png?compress=1&resize=200x200&vertical=top" alt="#">
+        <img src="https://cdn.dribbble.com/users/1787323/screenshots/16978715/media/ac7d8185dec4ca67b7a1508cced2265a.png?compress=1&resize=200x200&vertical=top" alt="#">
+        <img src="https://cdn.dribbble.com/users/1787323/screenshots/14959157/media/2231c3c6a6ae4d305807f70fd55be0fc.png?compress=1&resize=200x200&vertical=top" alt="#">
+        <img src="https://cdn.dribbble.com/users/1787323/screenshots/14959157/media/a51db6949057189cd1a5a9a5c4948a6f.png?compress=1&resize=200x200&vertical=top" alt="#">
+        <img src="https://cdn.dribbble.com/users/1787323/screenshots/17057630/media/b72f8ace7bceb2b5233119674f936663.png?compress=1&resize=200x200&vertical=top" alt="#">
+        <img src="https://cdn.dribbble.com/users/1787323/screenshots/17057630/media/2f9af73f733a74ac26cedd4d9d35b756.png?compress=1&resize=200x200&vertical=top" alt="">
+        <img src="https://cdn.dribbble.com/users/1787323/screenshots/17057630/media/68bdf2fa0769cd8e041a6c260f3cfff4.png?compress=1&resize=200x200&vertical=top " alt="">
+        <img src="https://cdn.dribbble.com/users/1787323/screenshots/17057630/media/8d7f8cfc5ee97bbc842567db823b62e7.png?compress=1&resize=200x200&vertical=top" alt="">
+        <img src="https://cdn.dribbble.com/users/1787323/screenshots/16856188/media/397b93417422fb0746baf73ed75457f1.png?compress=1&resize=200x200&vertical=top" alt="">
+        </section>
+    </body>
+</html>
